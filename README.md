@@ -16,3 +16,5 @@ This repository contains program created to automate our family fantasy sports l
 
 ## I'm currently working on:
 1. Creating the Web Scraper
+    - Using Beautiful Soup
+    - Using lxml
