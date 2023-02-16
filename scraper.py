@@ -1,17 +1,29 @@
 # importing dependencies
 from bs4 import BeautifulSoup
 import requests
+import pandas as pd
 
 # base URL as site uses RESTful scheme
-BASE_URL = 'http://racing-reference.info/driver-loop-data-stats/'
+BASE_URL = 'https://www.racing-reference.info/loopdata/'
 
-# sending html request to get site data
-# were just ugly concatonating the url here as a test, will be set programatically later
-url = BASE_URL + 'truexma02/W/2022/'
-page = requests.get(url)
+# setting years as range for next gen car, setting races as a range of race numbers from 1 to 36
+years = range(2022, 2024)
+races = range(1, 37)
 
-# creating our soup to parse
-soup = BeautifulSoup(page.content, 'html.parser')
+# iterating over each race during each year
+for year in years:
+    for race in races:
+        if race < 10:
+            url = BASE_URL + f'{year}-0{race}/W/'
+        else:
+            url = BASE_URL + f'{year}-{race}/W/'
 
-# testing data flow is successful
-print(soup)
+        # sending html request to get site data
+        page = requests.get(url)
+        # creating soup to parse
+        soup = BeautifulSoup(page.content, 'html.parser')
+
+        body = soup.select('body')
+
+        # testing data flow is successful
+        print(url)
