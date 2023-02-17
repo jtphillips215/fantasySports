@@ -21,9 +21,8 @@ for year in years:
         # sending html request to get site data
         page = requests.get(url)
         # creating soup to parse
-        soup = BeautifulSoup(page.content, 'html.parser')
+        soup = BeautifulSoup(page.text, 'html.parser')
 
-        body = soup.select('body')
+        data_frames = pd.read_html(page.text)
 
-        # testing data flow is successful
-        print(url)
+        print(data_frames)
