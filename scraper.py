@@ -24,5 +24,3 @@ for year in years:
         soup = BeautifulSoup(page.text, 'html.parser')
 
         data_frames = pd.read_html(page.text)
-
-        print(data_frames)
