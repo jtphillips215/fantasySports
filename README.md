@@ -16,6 +16,7 @@ This repository contains program created to automate our family fantasy sports l
 
 ## I'm currently working on:
 1. Creating the Web Scraper
-    - Using Beautiful Soup
-    - Using lxml
-    - Using requests
+    - Using Beautiful Soup, Pandas, and Requests
+    - Need to initially get historical data but only add new data as events are completed
+2. Creating data frames that can be used to work with that data or send to csv, sheets, or database
+    - Probably also using Pandas to_csv feature, but more work needs to be done cleaning up and formatting data
