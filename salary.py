@@ -12,8 +12,8 @@ def read_file():
 # function for creating player from spreadsheet rows
 def create_player(line):
   row = line.split(",")
-  whole_name = row[1].split(" ")
-  player = Player(whole_name[0], whole_name[1], row[7], row[10])
+  whole_name = row[1].strip().split(" ")
+  player = Player(whole_name[0], whole_name[1], float(row[7].strip('\"')), int(row[10].strip('\"')))
   return player
 
 
