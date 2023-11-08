@@ -1,4 +1,4 @@
-import Player
+from Player import Player
 
 
 # function for iterating through spreadsheet row by row
@@ -12,7 +12,8 @@ def read_file():
 def create_player(line):
   row = line.split(",")
   whole_name = row[1].split(" ")
-  print(whole_name)
+  player = Player(whole_name[0], whole_name[1], row[7], row[10])
+  print(player.first_name, player.last_name, player.avg_score, player.races)
 
 
 # file for reading and parsing spreadsheet
