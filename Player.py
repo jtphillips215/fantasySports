@@ -7,6 +7,8 @@ class Player:
 
 
   def __str__(self) -> str:
-    return f'{self.first_name} {self.last_name} average-{self.avg_score} races{self.races}'
+    return f'{self.first_name} {self.last_name} avg-{self.avg_score} rcs-{self.races}'
   
   
+  def set_pct_rank(self, pct_rank):
+    self.pct_rank = pct_rank
