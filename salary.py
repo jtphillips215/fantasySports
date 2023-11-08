@@ -5,7 +5,8 @@ from Player import Player
 def read_file():
   line = player_data.readline()
   for line in player_data:
-    create_player(line)
+    player = create_player(line)
+    print(player)
 
 
 # function for creating player from spreadsheet rows
@@ -13,7 +14,7 @@ def create_player(line):
   row = line.split(",")
   whole_name = row[1].split(" ")
   player = Player(whole_name[0], whole_name[1], row[7], row[10])
-  print(player)
+  return player
 
 
 # file for reading and parsing spreadsheet
