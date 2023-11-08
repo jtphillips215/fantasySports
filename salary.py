@@ -13,7 +13,7 @@ def create_player(line):
   row = line.split(",")
   whole_name = row[1].split(" ")
   player = Player(whole_name[0], whole_name[1], row[7], row[10])
-  print(player.first_name, player.last_name, player.avg_score, player.races)
+  print(player)
 
 
 # file for reading and parsing spreadsheet
