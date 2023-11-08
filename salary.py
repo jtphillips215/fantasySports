@@ -42,3 +42,5 @@ salary.write('First Name,Last Name,Average,Races\n')
 
 for player in players:
   salary.write(f'{player.first_name},{player.last_name},{player.avg_score},{player.races}\n')
+
+salary.close()
