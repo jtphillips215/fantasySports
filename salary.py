@@ -2,8 +2,14 @@ import numpy as np
 import scipy.stats as stats
 from Player import Player
 from Readers import Readers
+from Writers import Writers
 
-player_data = Readers.read_player_data()
+
+# reading player data from imported csv file
+df_player_data = Readers.read_player_data()
+
+# output salary file after calculations completed
+Writers.write_salary_file(df_player_data)
 
 """
 # function for iterating through spreadsheet row by row and appending data to list of players
