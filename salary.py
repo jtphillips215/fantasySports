@@ -1,9 +1,11 @@
 import numpy as np
-import pandas as pd
 import scipy.stats as stats
 from Player import Player
+from Readers import Readers
 
+player_data = Readers.read_player_data()
 
+"""
 # function for iterating through spreadsheet row by row and appending data to list of players
 def read_file():
   line = player_data.readline()
@@ -46,3 +48,4 @@ for player in players:
   salary.write(f'{player.first_name},{player.last_name},{player.avg_score},{player.races}\n')
 
 salary.close()
+"""
