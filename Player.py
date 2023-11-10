@@ -12,3 +12,8 @@ class Player:
   
   def set_pct_rank(self, pct_rank):
     self.pct_rank = pct_rank
+
+  
+  def get_avh_score(self):
+    return self.avg_score
+  
