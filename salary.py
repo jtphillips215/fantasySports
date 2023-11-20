@@ -8,6 +8,10 @@ from Writers import Writers
 # reading player data from imported csv file
 df_player_data = Readers.read_player_data()
 
+# programatic access to average scores for drivers running full time
+# 29 was minimum races of full time drivers in 2023
+full_season = df_player_data[df_player_data["RC"] >= 29]
+
 # output salary file after calculations completed
 Writers.write_salary_file(df_player_data)
 
